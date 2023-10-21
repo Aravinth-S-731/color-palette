@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+
+    --primary-h: 0;
+    --primary-s: 100%;
+    --primary-l: 100%;
+
+    /* ----- LIGHT MODE ----- */
+    --primary-light:                hsl(var(--primary-h) var(--primary-s) var(--primary-l));
+    --primary-text-light:           hsl(var(--primary-h) var(--primary-s) 10%);
+    --secondary1-text-light:        hsl(var(--primary-h) 30% 30%);
+    --secondary2-text-light:        hsl(var(--primary-h) 20% 50%);
+    --surface1-light:               hsl(var(--primary-h) 25% 90%);
+    --surface2-light:               hsl(var(--primary-h) 20% 99%);
+    --surface3-light:               hsl(var(--primary-h) 20% 92%);
+    --surface4-light:               hsl(var(--primary-h) 20% 85%);
+    --surface5-light:               hsl(var(--primary-h) 10% 70%);
+    --shadow-surface-light:         hsl(var(--primary-h) 10% 20%);
+    --shadow-strength-light:        0.02;
+
+    /* ----- DARK MODE ----- */
+    --primary-dark:                 hsl(var(--primary-h) calc(var(--primary-s)/2) calc(var(--primary-l)/1.5));
+    --primary-text-dark:            hsl(var(--primary-h) 15% 85%);
+    --secondary1-text-dark:         hsl(var(--primary-h) 5% 65%);
+    --secondary2-text-dark:         hsl(var(--primary-h) 5% 70%);
+    --surface1-dark:                hsl(var(--primary-h) 10% 10%);
+    --surface2-dark:                hsl(var(--primary-h) 10% 15%);
+    --surface3-dark:                hsl(var(--primary-h) 5% 20%);
+    --surface4-dark:                hsl(var(--primary-h) 5% 25%);
+    --surface5-dark:                hsl(var(--primary-h) 2% 30%);
+    --shadow-surface-dark:          hsl(var(--primary-h) 50% 3%);
+    --shadow-strength-dark:         0.8;
+}
+
+:root{
+
+    /* ----- DEFAULT COLOR SCHEMA ----- */
+    color-scheme: light;
+
+    --primary:          var(--primary-light);
+    --text1:            var(--primary-text-light);
+    --text2:            var(--secondary1-text-light);
+    --text3:            var(--secondary2-text-light);
+    --surface1:         var(--surface1-light);
+    --surface2:         var(--surface2-light);
+    --surface3:         var(--surface3-light);
+    --surface4:         var(--surface4-light);
+    --surface5:         var(--surface5-light);
+    --surface-shadow:   var(--shadow-surface-light);
+    --shadow-strength:  var(--shadow-strength-light);
+}
+
+@media (prefers-color-scheme: light) {
+    :root{
+        color-scheme: light;
+
+        --primary:          var(--primary-light);
+        --text1:            var(--primary-text-light);
+        --text2:            var(--secondary1-text-light);
+        --text3:            var(--secondary2-text-light);
+        --surface1:         var(--surface1-light);
+        --surface2:         var(--surface2-light);
+        --surface3:         var(--surface3-light);
+        --surface4:         var(--surface4-light);
+        --surface5:         var(--surface5-light);
+        --surface-shadow:   var(--shadow-surface-light);
+        --shadow-strength:  var(--shadow-strength-light);
+    }
+}
+
+[color-scheme = "light"] {
+    color-scheme: light;
+
+    --primary:          var(--primary-light);
+    --text1:            var(--primary-text-light);
+    --text2:            var(--secondary1-text-light);
+    --text3:            var(--secondary2-text-light);
+    --surface1:         var(--surface1-light);
+    --surface2:         var(--surface2-light);
+    --surface3:         var(--surface3-light);
+    --surface4:         var(--surface4-light);
+    --surface5:         var(--surface5-light);
+    --surface-shadow:   var(--shadow-surface-light);
+    --shadow-strength:  var(--shadow-strength-light);
+}
+
+[color-scheme = "dark"] {
+    color-scheme: dark;
+
+    --primary:          var(--primary-dark);
+    --text1:            var(--primary-text-dark);
+    --text2:            var(--secondary1-text-dark);
+    --text3:            var(--secondary2-text-dark);
+    --surface1:         var(--surface1-dark);
+    --surface2:         var(--surface2-dark);
+    --surface3:         var(--surface3-dark);
+    --surface4:         var(--surface4-dark);
+    --surface5:         var(--surface5-dark);
+    --surface-shadow:   var(--shadow-surface-dark);
+    --shadow-strength:  var(--shadow-strength-dark);
+}
+
+/* ----- PICKER PALETTE ----- */
+/* ----- [Displays the sample color while choosing primary color} ----- */
+.primary-1{
+    background-color: var(--primary);
+}
+.primary-2{
+    background-color: var(--text1);
+}
+.primary-3{
+    background-color: var(--text2);
+}
+.primary-4{
+    background-color: var(--text3);
+}
+.primary-5{
+    background-color: var(--surface-shadow);
+}
+
+.secondary-1{
+    background-color: var(--surface1);
+}
+.secondary-2{
+    background-color: var(--surface2);
+}
+.secondary-3{
+    background-color: var(--surface3);
+}
+.secondary-4{
+    background-color: var(--surface4);
+}
+.secondary-5{
+    background-color: var(--surface5);
+}
+
+/* ----- COLOR PALETTE ----- */
+/* ----- [Displays palette with text and color styling] ----- */
+.surface-sample div{
+    box-shadow: 0 10px 15px 5px var(--surface-shadow);
+}
+
+.surface1{
+    background-color:var(--surface1);
+    color: var(--text1);
+}
+.surface2{
+    background-color:var(--surface2);
+    color: var(--text2);
+}
+.surface3{
+    background-color:var(--surface3);
+    color: var(--text3);
+}
+.surface4{
+    background-color:var(--surface4);
+    color: var(--text1);
+}
+.surface5{
+    background-color:var(--surface5);
+    color: var(--text2);
+}
+
+.head1{
+    color: var(--text1);
+}
+.head2{
+    color: var(--text2);
+}
+.head3{
+    color: var(--text3);
+}
+.head4{
+    color: var(--text1);
+}
+
+.primary .sample-container{
+    background-color: var(--primary);
+}
+.text1 .sample-container{
+    background-color: var(--text1);
+}
+.text2 .sample-container{
+    background-color: var(--text2);
+}
+.text3 .sample-container{
+    background-color: var(--text3);
+}
+
+.sub-text-1{
+    color: var(--text3);
+}
+.sub-text-2{
+    color: var(--text2);
+}
+
+.button1{
+    color: var(--text1);
+    background-color: hsl(var(--primary-h) 70% 50%);
+    border: 1px solid var(--text1);
+}
+.button2{
+    color: hsl(120, 60%, 40%);
+    background-color: hsl(120, 25%, 90%);
+    border: 1px solid var(--text3);
+}
+.button3{
+    color: hsl(0, 60%, 40%);
+    background-color: hsl(0 25% 75%);
+    border: 1px solid var(--text3);
+}
+.button4{
+    color: var(--text2);
+    background-color: var(--surface5);
+    border: 1px solid var(--text3);
+}
