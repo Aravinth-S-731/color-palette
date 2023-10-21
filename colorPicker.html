@@ -20,8 +20,17 @@
         <nav>
             <a href="colorPicker.html"><h1>Color Palette Generator</h1></a>
             <ul>
-                <a href="#colorPickerSection"><li>Pick Color</li></a>
-                <a href="#colorPaletteSection"><li>Color Palette</li></a>
+                <!-- Theme toggle -->
+                <form id="themeSwitcher" class="theme-switcher">
+                    <div>
+                        <input checked type="radio" id="light" name="theme" value="light">
+                        <label for="light"><i class="fa fa-sun"></i> Light Mode</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="dark" name="theme" value="dark">
+                        <label for="dark"><i class="fa fa-moon"></i> Dark Mode</label>
+                    </div>
+                </form>
             </ul>
         </nav>
     </section>
@@ -57,17 +66,6 @@
 
     <!-- COLOR PALETTE -->
     <section class="color-palette" id="colorPaletteSection">
-        <!-- Theme toggle -->
-        <form id="themeSwitcher" class="theme-switcher">
-            <div>
-                <input checked type="radio" id="light" name="theme" value="light">
-                <label for="light"><i class="fa fa-sun"></i> Light Mode</label>
-            </div>
-            <div>
-                <input type="radio" id="dark" name="theme" value="dark">
-                <label for="dark"><i class="fa fa-moon"></i> Dark Mode</label>
-            </div>
-        </form>
 
         <!-- Content Head -->
         <div class="main-heading">

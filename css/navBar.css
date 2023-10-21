@@ -23,7 +23,7 @@ nav a{
 nav h1{
     padding: 0 4em;
     font-size: 24px;
-    color: var(--tertiary-font-col);
+    color: var(--primary-font-col);
     transition: 0.5s;
     text-transform: uppercase;
 }
